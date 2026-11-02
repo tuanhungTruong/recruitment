@@ -1,0 +1,2 @@
+# Runtime uses the Python standard library only.
+# Install pytest if you prefer that runner; tests also run with unittest.

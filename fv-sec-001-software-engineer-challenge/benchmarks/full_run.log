@@ -1,0 +1,12 @@
+python aggregator.py --input ad_data.csv\ad_data.csv --output results/
+
+Campaigns: 50
+Rows aggregated: 26843544
+Rows skipped: 0
+Wrote results\top10_ctr.csv
+Wrote results\top10_cpa.csv
+Elapsed: 46.13s
+Peak RSS: 19.9 MiB
+
+Machine: Windows 10 (build 26200), Python 3, local path under OneDrive
+Input: ad_data.csv/ad_data.csv (1043304870 bytes)

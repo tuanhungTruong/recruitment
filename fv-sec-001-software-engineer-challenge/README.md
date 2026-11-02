@@ -161,3 +161,25 @@ This is **not mandatory** but **highly valued** as it demonstrates your ability 
 ---
 
 Good luck, and happy coding!
+
+---
+
+# Solution
+
+Python 3.11+. No third-party libraries.
+
+```bash
+python aggregator.py --input ad_data.csv/ad_data.csv --output results/
+python -m unittest discover -s tests -v
+```
+
+Libraries: stdlib only (`argparse`, `csv`, `dataclasses`, `pathlib`, `time`; `ctypes` on Windows for peak RSS).
+
+| Metric | Value |
+|--------|--------|
+| Rows aggregated | 26,843,544 |
+| Unique campaigns | 50 |
+| Elapsed | 46.13 s |
+| Peak RSS | 19.9 MiB |
+
+The file is streamed in one pass; memory is O(unique campaigns), not O(rows). CTR ranking uses the unrounded ratio (6 decimal places in the CSV). CPA is omitted when conversions are 0. Malformed rows are skipped. See `benchmarks/full_run.log` and `Dockerfile`.
